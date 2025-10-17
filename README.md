@@ -27,7 +27,13 @@
 
 ## 🤝 Partners Developer
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=openai,googlecloud" alt="partners" />
+  <a href="https://chat.openai.com/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg" width="60" height="60" alt="ChatGPT" />
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://gemini.google.com/" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Google_Gemini_logo.svg/512px-Google_Gemini_logo.svg.png" width="60" height="60" alt="Gemini" />
+  </a>
 </p>
 
 ---
