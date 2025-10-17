@@ -26,13 +26,14 @@
 ---
 
 ## 🤝 Partners Developer
+
 <p align="center">
-  <a href="https://chat.openai.com/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg" width="60" height="60" alt="ChatGPT" />
+  <a href="https://chat.openai.com/">
+    <img src="https://raw.githubusercontent.com/davvrbbani/davvrbbani/main/assets/partners/chatgpt.png" width="70" />
   </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://gemini.google.com/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Google_Gemini_logo.svg" width="60" height="60" alt="Gemini" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://gemini.google.com/">
+    <img src="https://raw.githubusercontent.com/davvrbbani/davvrbbani/main/assets/partners/gemini.png" width="70" />
   </a>
 </p>
 
