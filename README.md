@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <strong>Davvrbbani</strong> — web developer & tech tinkerer.<br/>
+  <strong>davvrbbani</strong> — web developer & tech tinkerer.<br/>
   <small style="opacity:0.8">I build tidy, pragmatic web stuff with a dash of Luminatic-vibes. Dark mode preferred. ☕</small>
 </p>
 
