@@ -1,54 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="400">
   <defs>
-    <!-- Background gradient ala hacker -->
+    <!-- Background gradient -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#001100"/>
-      <stop offset="50%" stop-color="#003300"/>
-      <stop offset="100%" stop-color="#000000"/>
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="40%" stop-color="#001a00"/>
+      <stop offset="100%" stop-color="#003300"/>
     </linearGradient>
 
-    <!-- Glitch text effect -->
+    <!-- Subtle light ray overlay -->
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(0,255,100,0.05)"/>
+      <stop offset="50%" stop-color="rgba(0,255,100,0.1)"/>
+      <stop offset="100%" stop-color="rgba(0,255,100,0.05)"/>
+    </linearGradient>
+
     <style>
       .bg {
         fill: url(#bg);
+      }
+      .overlay {
+        fill: url(#light);
       }
       .text {
         font-family: 'Courier New', monospace;
         font-size: 90px;
         font-weight: bold;
-        fill: #00ff55;
         text-anchor: middle;
         dominant-baseline: middle;
-        filter: drop-shadow(0 0 15px #00ff55);
+        fill: #00ff66;
+        opacity: 0.8;
+        filter: drop-shadow(0 0 12px rgba(0,255,80,0.3))
+                drop-shadow(0 0 30px rgba(0,255,60,0.2));
+      }
+      .subtitle {
+        font-family: 'Courier New', monospace;
+        font-size: 24px;
+        text-anchor: middle;
+        fill: #00cc55;
+        opacity: 0.6;
       }
 
-      .text::before,
-      .text::after {
-        content: attr(data-text);
-        position: absolute;
+      /* Simple breathing animation */
+      @keyframes glow {
+        0%, 100% { filter: drop-shadow(0 0 10px rgba(0,255,80,0.3)); opacity: 0.8; }
+        50% { filter: drop-shadow(0 0 18px rgba(0,255,120,0.5)); opacity: 1; }
       }
-
-      /* animasi glitch */
-      @keyframes glitch {
-        0% { transform: translate(0, 0); }
-        20% { transform: translate(-2px, 2px); }
-        40% { transform: translate(-1px, -1px); }
-        60% { transform: translate(2px, 1px); }
-        80% { transform: translate(-1px, 2px); }
-        100% { transform: translate(0, 0); }
-      }
-
-      .glitch {
-        animation: glitch 0.2s infinite;
+      .glow {
+        animation: glow 2.5s infinite ease-in-out;
       }
     </style>
   </defs>
 
   <!-- Background -->
-  <rect class="bg" width="800" height="400" />
+  <rect width="800" height="400" class="bg" />
 
-  <!-- Glitch text layers -->
-  <text x="400" y="210" class="text glitch" fill="#00ff55" opacity="0.8">DAVVRBBANI</text>
-  <text x="403" y="212" class="text" fill="#00aa33" opacity="0.5">DAVVRBBANI</text>
-  <text x="397" y="208" class="text" fill="#00ff99" opacity="0.5">DAVVRBBANI</text>
+  <!-- Overlay light texture -->
+  <rect width="800" height="400" class="overlay" opacity="0.2"/>
+
+  <!-- Text -->
+  <text x="400" y="210" class="text glow">DAVVRBBANI</text>
+  <text x="400" y="260" class="subtitle">Website Developer // Apps Mobile Developer</text>
 </svg>
