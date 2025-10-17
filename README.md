@@ -43,7 +43,7 @@
 
 ## 💬 Want to collaborate?
 I’m open to small collabs, bug fixes, or code reviews.  
-Drop a message: **(replace-with-your-email@example.com)**  
+Drop a message: **(syujadavy@gmail.com)**  
 Or open an issue on any repo and mention `@davvrbbani`.
 
 ---
