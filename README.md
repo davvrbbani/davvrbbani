@@ -64,7 +64,6 @@ Or open an issue on any repo and mention `@davvrbbani`.
 ---
 
 ## 📈 GitHub Stats (optional)
-If you want to show autometrics, paste this under the banner (remove if you prefer minimal):
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=davvrbbani&show_icons=true&theme=dark&hide_border=true" alt="davvrbbani stats" />
   &nbsp;
