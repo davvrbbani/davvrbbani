@@ -22,6 +22,6 @@ Here are some ideas to get you started:
 
 <h3 align="center">💻 Languages & Tools I Use</h3>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,php,python,java,flutter,mysql,git,github,vscode" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,php,python,java,flutter,mysql,github,vscode" />
 </p>
 
