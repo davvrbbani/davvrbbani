@@ -33,7 +33,7 @@
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://gemini.google.com/">
-    <img src="https://raw.githubusercontent.com/davvrbbani/davvrbbani/main/assets/partners/gemini.png" width="70" />
+    <img src="https://raw.githubusercontent.com/davvrbbani/davvrbbani/main/assets/partners/ChatGPT Image Oct 17, 2025, 08_30_08 PM.png" width="70" />
   </a>
 </p>
 
