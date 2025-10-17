@@ -41,7 +41,7 @@
 ---
 
 ## 🔎 Featured / Pinned
-> (Replace links with your repos — example placeholders)
+> https://github.com/davvrbbani/davvrbbani
 
 - **Portfolio / Main Project** — [davvrbbani/portfolio](https://github.com/davvrbbani/portfolio)  
   A clean single-page portfolio / projects showcase.
