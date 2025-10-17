@@ -32,9 +32,10 @@
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://gemini.google.com/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Google_Gemini_logo.svg/512px-Google_Gemini_logo.svg.png" width="60" height="60" alt="Gemini" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Google_Gemini_logo.svg" width="60" height="60" alt="Gemini" />
   </a>
 </p>
+
 
 ---
 
