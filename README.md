@@ -25,6 +25,13 @@
 
 ---
 
+## 🤝 Partners Developer
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=openai,googlecloud" alt="partners" />
+</p>
+
+---
+
 ## 🔎 Featured / Pinned
 > (Replace links with your repos — example placeholders)
 
