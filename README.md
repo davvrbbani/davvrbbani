@@ -21,7 +21,7 @@
 - 🔭 **Currently working on:** polishing personal projects & README aesthetics  
 - 🌱 **Learning:** deeper JS tooling & modern frontend patterns  
 - 🧰 **Primary stack:** HTML · CSS · JavaScript · PHP · Python · MySQL · Flutter  
-- 📫 **Contact:** Replace with your email or socials below
+- 📫 **Contact:** syujadavy@gmail.com
 
 ---
 
