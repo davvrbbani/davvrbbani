@@ -1,27 +1,58 @@
-## Hi there 👋
+# Hi there 👋
 
-<!--
-**davvrbbani/davvrbbani** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
 <p align="center">
-  <a href="https://github.com/davvrbbani">
+  <a href="https://github.com/davvrbbani" target="_blank" rel="noopener">
     <img src="https://raw.githubusercontent.com/davvrbbani/davvrbbani/main/hacker-banner.svg" alt="davvrbbani hacker banner" />
   </a>
 </p>
 
-<h3 align="center">💻 Languages & Tools I Use</h3>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,php,python,java,flutter,mysql,github,vscode" />
+  <strong>Davvrbbani</strong> — web developer & tech tinkerer.<br/>
+  <small style="opacity:0.8">I build tidy, pragmatic web stuff with a dash of hacker-vibes. Dark mode preferred. ☕</small>
 </p>
 
+---
+
+## ⚡ Quick Snapshot
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,php,python,java,flutter,mysql,git,github,vscode&theme=dark&perline=6" alt="skills" />
+</p>
+
+- 🔭 **Currently working on:** polishing personal projects & README aesthetics  
+- 🌱 **Learning:** deeper JS tooling & modern frontend patterns  
+- 🧰 **Primary stack:** HTML · CSS · JavaScript · PHP · Python · MySQL · Flutter  
+- 📫 **Contact:** Replace with your email or socials below
+
+---
+
+## 🔎 Featured / Pinned
+> (Replace links with your repos — example placeholders)
+
+- **Portfolio / Main Project** — [davvrbbani/portfolio](https://github.com/davvrbbani/portfolio)  
+  A clean single-page portfolio / projects showcase.
+
+---
+
+## 🔭 What I enjoy building
+- Interactive website UI (responsive, accessible)  
+- Small backend utilities & integrations (PHP / Python)  
+- Mobile prototypes with Flutter  
+- Visual / branding assets using SVG
+
+---
+
+## 💬 Want to collaborate?
+I’m open to small collabs, bug fixes, or code reviews.  
+Drop a message: **(replace-with-your-email@example.com)**  
+Or open an issue on any repo and mention `@davvrbbani`.
+
+---
+
+## 📈 GitHub Stats (optional)
+If you want to show autometrics, paste this under the banner (remove if you prefer minimal):
+```md
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=davvrbbani&show_icons=true&theme=dark&hide_border=true" alt="davvrbbani stats" />
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=davvrbbani&layout=compact&theme=dark&hide_border=true" alt="top langs" />
+</p>
