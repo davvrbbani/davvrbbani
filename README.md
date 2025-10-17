@@ -1,4 +1,4 @@
-# Hi there 👋
+# Hi there
 
 <p align="center">
   <a href="https://github.com/davvrbbani" target="_blank" rel="noopener">
