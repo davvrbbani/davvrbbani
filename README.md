@@ -29,7 +29,7 @@
 
 <p align="center">
   <a href="https://chat.openai.com/">
-    <img src="https://raw.githubusercontent.com/davvrbbani/davvrbbani/main/assets/partners/chatgpt.png" width="70" />
+    <img src="https://raw.githubusercontent.com/davvrbbani/davvrbbani/main/assets/partners/ChatGPT Image Oct 17, 2025, 08_27_35 PM.png" width="70" />
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://gemini.google.com/">
