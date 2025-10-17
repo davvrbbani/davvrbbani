@@ -58,6 +58,6 @@
   <rect width="800" height="400" class="overlay" opacity="0.2"/>
 
   <!-- Text -->
-  <text x="400" y="210" class="text glow">DAVVRBBANI</text>
+  <text x="400" y="210" class="text glow">davvrbbani</text>
   <text x="400" y="260" class="subtitle">Website Developer // Apps Mobile Developer</text>
 </svg>
