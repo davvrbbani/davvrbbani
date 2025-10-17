@@ -15,7 +15,7 @@
 
 ## ⚡ Quick Snapshot
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,php,python,java,flutter,mysql,git,github,vscode,codeblock&theme=dark&perline=6" alt="skills" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,php,python,java,flutter,mysql,git,github,vscode,cpp&theme=dark&perline=6" alt="skills" />
 </p>
 
 - 🔭 **Currently working on:** polishing personal projects & README aesthetics  
