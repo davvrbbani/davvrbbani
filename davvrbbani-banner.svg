@@ -1,13 +1,11 @@
 <svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradient backgrounds -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#1a1f3a;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0f1729;stop-opacity:1" />
     </linearGradient>
     
-    <!-- Animated color gradient for accents -->
     <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:1">
         <animate attributeName="stop-color" values="#667eea;#764ba2;#f093fb;#4facfe;#667eea" dur="8s" repeatCount="indefinite"/>
@@ -20,12 +18,10 @@
       </stop>
     </linearGradient>
     
-    <!-- Grid pattern -->
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="url(#accentGrad)" stroke-width="0.5" opacity="0.15"/>
     </pattern>
     
-    <!-- Glow filter -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge>
@@ -36,6 +32,7 @@
   </defs>
   
   <style>
+    /* Style Utama (TETAP UTUH) */
     .main-text {
       font-family: 'Arial Black', 'Arial', sans-serif;
       font-weight: 900;
@@ -45,7 +42,6 @@
       letter-spacing: 4px;
       filter: url(#glow);
     }
-    
     .shadow-text {
       font-family: 'Arial Black', 'Arial', sans-serif;
       font-weight: 900;
@@ -56,51 +52,70 @@
       opacity: 0.5;
     }
     
-    .typing-container {
+    /* --- STYLE BARU UNTUK ANIMASI CSS --- */
+    .bracket-text {
       font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
       font-weight: 600;
       font-size: 20px;
-      fill: #e0e6ff;
+      fill: #4facfe; /* Warna biru terang untuk kurung */
       text-anchor: middle;
-      letter-spacing: 2px;
     }
-    
-    .cursor-blink {
-      animation: blink 0.8s infinite;
+
+    /* Style dasar untuk teks jabatan */
+    .role-text {
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-weight: 600;
+      font-size: 20px;
+      fill: #e0e6ff; /* Warna putih kebiruan */
+      text-anchor: middle;
+      opacity: 0; /* Default sembunyi */
     }
-    
-    @keyframes blink {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
+
+    /* Definisi Animasi Fade/Slide Cycle */
+    /* Total durasi 16 detik (4 role x 4 detik per role) */
+    @keyframes roleCycle {
+      0% { opacity: 0; transform: translateY(10px); } /* Mulai: samar di bawah */
+      5% { opacity: 1; transform: translateY(0px); }  /* Masuk: jelas di tengah */
+      25% { opacity: 1; transform: translateY(0px); } /* Tahan: tetap jelas */
+      30% { opacity: 0; transform: translateY(-10px); } /* Keluar: samar ke atas */
+      100% { opacity: 0; } /* Sisanya sembunyi */
     }
+
+    /* Terapkan animasi dengan delay berbeda untuk setiap teks */
+    /* Role 1 muncul langsung */
+    .r1 { animation: roleCycle 16s linear infinite 0s; }
+    /* Role 2 muncul setelah 4 detik */
+    .r2 { animation: roleCycle 16s linear infinite 4s; }
+    /* Role 3 muncul setelah 8 detik */
+    .r3 { animation: roleCycle 16s linear infinite 8s; }
+    /* Role 4 muncul setelah 12 detik */
+    .r4 { animation: roleCycle 16s linear infinite 12s; }
+
+    /* Cursor Blink (Optional, kalau mau tetap ada) */
+    .cursor-blink { animation: blink 1s infinite step-end; fill: #4facfe; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
   </style>
   
-  <!-- Background -->
   <rect width="100%" height="100%" fill="url(#bgGradient)" rx="10" ry="10"/>
   <rect width="100%" height="100%" fill="url(#grid)"/>
   
-  <!-- Animated scan lines -->
   <g opacity="0.6">
     <rect x="-150" y="30" width="150" height="3" fill="url(#accentGrad)">
       <animate attributeName="x" from="-150" to="800" dur="2.5s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;1;0.8;0" dur="2.5s" repeatCount="indefinite"/>
     </rect>
-    
     <rect x="-100" y="100" width="100" height="2" fill="#ffffff" opacity="0.4">
       <animate attributeName="x" from="-100" to="800" dur="3s" begin="0.5s" repeatCount="indefinite"/>
     </rect>
-    
     <rect x="-200" y="180" width="200" height="4" fill="url(#accentGrad)">
       <animate attributeName="x" from="-200" to="800" dur="4s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0.8;0.6;0" dur="4s" repeatCount="indefinite"/>
     </rect>
-    
     <rect x="-80" y="220" width="80" height="2" fill="#4facfe" opacity="0.5">
       <animate attributeName="x" from="-80" to="800" dur="3.5s" begin="1s" repeatCount="indefinite"/>
     </rect>
   </g>
   
-  <!-- Glowing particles -->
   <circle cx="100" cy="50" r="2" fill="url(#accentGrad)" opacity="0.6">
     <animate attributeName="cy" values="250;-10" dur="6s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0;0.8;0" dur="6s" repeatCount="indefinite"/>
@@ -118,67 +133,16 @@
     <animate attributeName="opacity" values="0;0.7;0" dur="6.5s" begin="0.5s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Main text with shadow -->
   <text x="402" y="112" class="shadow-text">DAVVRBBANI</text>
   <text x="400" y="110" class="main-text">DAVVRBBANI</text>
   
-  <!-- Typewriter text -->
-  <text x="400" y="170" class="typing-container">
-    <tspan id="typed-text">&lt; </tspan>
-    <tspan id="cursor" class="cursor-blink">_</tspan>
-    <tspan> /&gt;</tspan>
-  </text>
-  
-  <script type="text/javascript">
-    <![CDATA[
-    (function() {
-      const roles = [
-        "WEBSITE DEVELOPER",
-        "APPS MOBILE DEVELOPER",
-        "FULL STACK DEVELOPER",
-        "UI/UX DESIGNER"
-      ];
-      
-      let roleIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      let typingSpeed = 70;
-      
-      const typedText = document.getElementById('typed-text');
-      const cursor = document.getElementById('cursor');
-      
-      function type() {
-        const currentRole = roles[roleIndex];
-        
-        if (isDeleting) {
-          // Deleting
-          typedText.textContent = '< ' + currentRole.substring(0, charIndex - 1);
-          charIndex--;
-          typingSpeed = 30;
-          
-          if (charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            typingSpeed = 200; // Pause before typing next
-          }
-        } else {
-          // Typing
-          typedText.textContent = '< ' + currentRole.substring(0, charIndex + 1);
-          charIndex++;
-          typingSpeed = 70;
-          
-          if (charIndex === currentRole.length) {
-            isDeleting = true;
-            typingSpeed = 1000; // Pause at end
-          }
-        }
-        
-        setTimeout(type, typingSpeed);
-      }
-      
-      // Start typing after 1 second
-      setTimeout(type, 1000);
-    })();
-    ]]>
-  </script>
-</svg>
+  <text x="260" y="170" class="bracket-text">&lt; </text>
+  <text x="540" y="170" class="bracket-text"> /&gt;</text>
+  <text x="560" y="170" class="bracket-text cursor-blink">_</text>
+
+  <text x="400" y="170" class="role-text r1">WEBSITE DEVELOPER</text>
+  <text x="400" y="170" class="role-text r2">APPS MOBILE DEVELOPER</text>
+  <text x="400" y="170" class="role-text r3">FULL STACK DEVELOPER</text>
+  <text x="400" y="170" class="role-text r4">UI/UX DESIGNER</text>
+
+  </svg>
