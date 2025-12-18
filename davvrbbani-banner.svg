@@ -1,104 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0f0f1a"/> <stop offset="100%" stop-color="#000000"/> </linearGradient>
-
-    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#bf953f" />
-      <stop offset="25%" stop-color="#fcf6ba" /> <stop offset="50%" stop-color="#b38728" />
-      <stop offset="75%" stop-color="#fbf5b7" /> <stop offset="100%" stop-color="#aa771c" />
-    </linearGradient>
-
+    <linearGradient id="blueGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#003366;stop-opacity:1" /> <stop offset="100%" style="stop-color:#0077be;stop-opacity:1" /> </linearGradient>
+    
     <style>
-      /* Base Styles */
-      .bg { fill: url(#bgGradient); }
-      
-      /* Main Name Style - Menggunakan Font Serif Bawaan (Times/Georgia) agar Elegan */
-      .main-text {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 85px;
-        font-weight: bold;
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 48px;
+        font-weight: 700; fill: #ffffff;
         text-anchor: middle;
-        fill: url(#goldGradient);
-        filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.8));
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        fill: #e6f7ff; text-anchor: middle;
         letter-spacing: 2px;
-        opacity: 0.95;
       }
-
-      /* Subtitle Style - Menggunakan Monospace untuk efek koding */
-      .subtitle {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 24px;
-        fill: #d4af37; /* Solid Gold Color */
-        text-anchor: middle;
-        opacity: 0.8;
-      }
-
-      /* === ANIMATION LOGIC === */
-      
-      /* Keyframes untuk Typewriter */
-      /* Kita memanipulasi stroke-dasharray dan stroke-dashoffset adalah cara paling aman di SVG */
-      /* Tapi untuk teks tengah, opacity toggle lebih stabil */
-
-      @keyframes typeCycle {
-        0%, 45% { opacity: 1; } /* Teks 1 Muncul */
-        45.1%, 100% { opacity: 0; } /* Teks 1 Hilang */
-      }
-      
-      @keyframes typeCycle2 {
-        0%, 45% { opacity: 0; } /* Teks 2 Hilang (Menunggu giliran) */
-        45.1%, 95% { opacity: 1; } /* Teks 2 Muncul */
-        95.1%, 100% { opacity: 0; } /* Reset */
-      }
-
-      /* Simulasi mengetik menggunakan clip-path (masking) */
-      @keyframes typing {
-        0% { clip-path: inset(0 100% 0 0); } /* Kosong */
-        15% { clip-path: inset(0 0 0 0); } /* Terketik Penuh */
-        35% { clip-path: inset(0 0 0 0); } /* Diam sebentar */
-        45% { clip-path: inset(0 100% 0 0); } /* Terhapus */
-        100% { clip-path: inset(0 100% 0 0); }
-      }
-
-      /* Class Pengaplikasian Animasi */
-      .text-group-1 {
-        animation: typeCycle 10s infinite step-end;
-      }
-      
-      .text-group-2 {
-        animation: typeCycle2 10s infinite step-end;
-      }
-
-      /* Inner text animation (efek mengetik per huruf) */
-      .typing-effect {
-        animation: typing 5s infinite; /* Durasi 5s karena dibagi 2 text dalam 10s loop total */
-      }
-      
-      /* Animasi Kilau Mewah pada Nama */
-      @keyframes shine {
-        0% { opacity: 0.9; }
-        50% { opacity: 1; text-shadow: 0 0 15px rgba(252, 246, 186, 0.4); }
-        100% { opacity: 0.9; }
-      }
-      .main-text {
-        animation: shine 4s infinite ease-in-out;
-      }
-
     </style>
   </defs>
 
-  <rect width="100%" height="100%" class="bg" />
-
-  <rect x="10" y="10" width="780" height="380" fill="none" stroke="url(#goldGradient)" stroke-width="2" opacity="0.3" />
-
-  <text x="400" y="200" class="main-text">davvrbbani</text>
-
-  <g class="text-group-1">
-     <text x="400" y="260" class="subtitle typing-effect">Website Developer</text>
+  <rect width="100%" height="100%" fill="url(#blueGrad)" rx="15" ry="15"/> <g>
+    <path fill="#ffffff" opacity="0.2" d="M0 60 Q 200 100 400 60 T 800 60 T 1200 60 V 0 H 0 Z">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-400 0" dur="20s" repeatCount="indefinite" />
+    </path>
+     <path fill="#ffffff" opacity="0.3" d="M0 50 Q 150 80 300 50 T 600 50 T 900 50 V 0 H 0 Z">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-300 0" dur="15s" repeatCount="indefinite" />
+    </path>
+    <path fill="#ffffff" opacity="0.5" d="M0 40 Q 100 70 200 40 T 400 40 T 600 40 T 800 40 V 0 H 0 Z">
+      <animateTransform attributeName="transform" type="translate" from="-400 0" to="0 0" dur="10s" repeatCount="indefinite" />
+    </path>
   </g>
 
-  <g class="text-group-2">
-     <text x="400" y="260" class="subtitle typing-effect">Apps Mobile Developer</text>
-  </g>
+  <text x="50%" y="160" class="title-text">HI, I'M [NAMAMU]</text>
+  <text x="50%" y="200" class="subtitle-text">WELCOME TO MY PORTFOLIO</text>
 
 </svg>
