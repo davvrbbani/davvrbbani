@@ -19,7 +19,7 @@
 
 ```javascript
 const davvrbbani = {
-    location: "Purwokerto, Indonesia 🇮🇩",
+    location: "Cilacap, Indonesia 🇮🇩",
     currentFocus: "Building responsive web apps & mobile solutions",
     learning: ["Advanced React Patterns", "Cloud Architecture", "System Design"],
     interests: ["Open Source", "UI/UX Design", "Performance Optimization"],
@@ -75,7 +75,7 @@ const davvrbbani = {
       <h3 align="center">🎨 Personal Portfolio</h3>
       <div align="center">
         <a href="https://github.com/davvrbbani/portfolio" target="_blank">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=davvrbbani&repo=portfolio&theme=tokyonight&hide_border=true" alt="Portfolio" />
+          <img src="https://via.placeholder.com/400x120/667eea/ffffff?text=Portfolio+Website" alt="Portfolio" />
         </a>
         <br><br>
         <p>
