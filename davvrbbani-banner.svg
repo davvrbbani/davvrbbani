@@ -1,64 +1,88 @@
 <svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#050a14" rx="10" ry="10"/>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1f3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f1729;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1">
+        <animate attributeName="stop-color" values="#667eea;#764ba2;#f093fb;#4facfe;#667eea" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1">
+        <animate attributeName="stop-color" values="#764ba2;#f093fb;#4facfe;#667eea;#764ba2" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1">
+        <animate attributeName="stop-color" values="#f093fb;#4facfe;#667eea;#764ba2;#f093fb" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="url(#accentGrad)" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
   
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e3a8a" stroke-width="1" opacity="0.3"/>
-  </pattern>
-  <rect width="100%" height="100%" fill="url(#grid)" />
-
-  <g>
-    <rect x="-100" y="40" width="100" height="2" fill="#3b82f6" opacity="0.8">
-      <animate attributeName="x" from="-100" to="900" dur="2s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
-    </rect>
-    
-    <rect x="-200" y="125" width="200" height="1" fill="#ffffff" opacity="0.5">
-      <animate attributeName="x" from="-200" to="1000" dur="1.2s" begin="0.5s" repeatCount="indefinite" />
-    </rect>
-
-    <rect x="-150" y="200" width="150" height="4" fill="#06b6d4" opacity="0.6">
-      <animate attributeName="x" from="-150" to="900" dur="3.5s" repeatCount="indefinite" />
-    </rect>
-    
-     <rect x="-50" y="80" width="50" height="1" fill="#60a5fa" opacity="0.7">
-      <animate attributeName="x" from="-50" to="850" dur="4s" begin="1s" repeatCount="indefinite" />
-    </rect>
-  </g>
-
   <style>
     .main-text {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 800; /* Extra Bold */
-      font-size: 56px;
-      fill: #ffffff;
-      text-anchor: middle;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .sub-text {
-      font-family: 'Courier New', Courier, monospace; /* Monospace biar kesan coding */
-      font-weight: 600;
-      font-size: 18px;
-      fill: #60a5fa; /* Biru Muda */
+      font-family: 'Arial Black', 'Arial', sans-serif;
+      font-weight: 900;
+      font-size: 64px;
+      fill: url(#accentGrad);
       text-anchor: middle;
       letter-spacing: 4px;
+      filter: url(#glow);
+    }
+    
+    .shadow-text {
+      font-family: 'Arial Black', 'Arial', sans-serif;
+      font-weight: 900;
+      font-size: 64px;
+      fill: #1a1f3a;
+      text-anchor: middle;
+      letter-spacing: 4px;
+      opacity: 0.5;
+    }
+    
+    .typing-container {
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-weight: 600;
+      font-size: 20px;
+      fill: #e0e6ff;
+      text-anchor: middle;
+      letter-spacing: 2px;
+    }
+    
+    .cursor-blink {
+      animation: blink 0.8s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
     }
   </style>
-
-  <text x="52%" y="132" class="main-text" fill="#2563eb" opacity="0.4">
-      [NAMA ANDA]
-  </text>
-
-  <text x="50%" y="130" class="main-text">
-    [NAMA ANDA]
-  </text>
-
-  <text x="50%" y="170" class="sub-text">
-    &lt; FULL STACK DEVELOPER /&gt;
-  </text>
   
-  <rect x="635" y="155" width="10" height="20" fill="#60a5fa">
-     <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" />
-  </rect>
-
-</svg>
+  <rect width="100%" height="100%" fill="url(#bgGradient)" rx="10" ry="10"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <g opacity="0.6">
+    <rect x="-150" y="30" width="150" height="3" fill="url(#accentGrad)">
+      <animate attributeName="x" from="-150" to="800" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0.8;0" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <rect x="-100" y="100" width="100" height="2" fill="#ffffff" opacity="0.4">
+      <animate attributeName="x" from="-100" to="800" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <rect x="-200" y="180" width="200" height="4" fill="url(#accentGrad)">
+      <animate attributeName="
