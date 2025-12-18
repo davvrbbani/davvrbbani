@@ -38,21 +38,24 @@
     
     <style>
       .luxury-text {
-        font-family: 'Georgia', serif;
-        font-size: 92px;
-        font-weight: bold;
+        font-family: 'Arial', 'Helvetica', sans-serif;
+        font-size: 96px;
+        font-weight: 900;
         text-anchor: middle;
         fill: url(#accentGlow);
         filter: url(#glow);
-        letter-spacing: 4px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
       }
       
       .typing-text {
-        font-family: 'Consolas', 'Monaco', monospace;
-        font-size: 22px;
+        font-family: 'Arial', 'Helvetica', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
         text-anchor: middle;
         fill: #a8b2d1;
         opacity: 0.9;
+        letter-spacing: 1px;
       }
       
       .cursor {
@@ -132,6 +135,16 @@
     <animate attributeName="opacity" values="0.15;0.03;0.15" dur="5s" repeatCount="indefinite"/>
   </circle>
   
+  <!-- Hexagon decorative elements -->
+  <g opacity="0.15" stroke="url(#accentGlow)" stroke-width="2" fill="none">
+    <polygon points="100,100 130,85 160,100 160,130 130,145 100,130">
+      <animateTransform attributeName="transform" type="rotate" from="0 130 115" to="360 130 115" dur="20s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="640,280 670,265 700,280 700,310 670,325 640,310">
+      <animateTransform attributeName="transform" type="rotate" from="0 670 295" to="-360 670 295" dur="25s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
   <!-- Decorative corner accents -->
   <path d="M 0,0 L 120,0 L 0,120 Z" fill="url(#accentGlow)" opacity="0.08"/>
   <path d="M 800,400 L 680,400 L 800,280 Z" fill="url(#accentGlow)" opacity="0.08"/>
@@ -162,9 +175,7 @@
     (function() {
       const texts = [
         "Website Developer",
-        "Apps Mobile Developer",
-        "Full Stack Engineer",
-        "UI/UX Specialist"
+        "Apps Mobile Developer"
       ];
       let textIndex = 0;
       let charIndex = 0;
@@ -186,7 +197,7 @@
         const currentText = texts[textIndex];
         
         if (isPaused) {
-          setTimeout(type, 2000);
+          setTimeout(type, 2500);
           isPaused = false;
           isDeleting = true;
           return;
@@ -199,7 +210,7 @@
           if (charIndex === 0) {
             isDeleting = false;
             textIndex = (textIndex + 1) % texts.length;
-            setTimeout(type, 500);
+            setTimeout(type, 300);
             return;
           }
         } else {
@@ -208,19 +219,19 @@
           
           if (charIndex === currentText.length) {
             isPaused = true;
-            setTimeout(type, 2000);
+            setTimeout(type, 2500);
             updateCursorPosition();
             return;
           }
         }
         
         updateCursorPosition();
-        const speed = isDeleting ? 50 : 100;
+        const speed = isDeleting ? 40 : 80;
         setTimeout(type, speed);
       }
       
       // Start typing effect
-      setTimeout(type, 1000);
+      setTimeout(type, 800);
     })();
     ]]>
   </script>
