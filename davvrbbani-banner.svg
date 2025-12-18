@@ -1,64 +1,227 @@
-<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#050a14" rx="10" ry="10"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <!-- Sophisticated gradient background -->
+    <linearGradient id="luxuryBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="30%" stop-color="#1a1a2e"/>
+      <stop offset="70%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f0f1e"/>
+    </linearGradient>
+    
+    <!-- Animated gradient accent -->
+    <linearGradient id="accentGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#667eea">
+        <animate attributeName="stop-color" values="#667eea;#764ba2;#f093fb;#667eea" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#764ba2">
+        <animate attributeName="stop-color" values="#764ba2;#f093fb;#667eea;#764ba2" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#f093fb">
+        <animate attributeName="stop-color" values="#f093fb;#667eea;#764ba2;#f093fb" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Radial glow effect -->
+    <radialGradient id="radialGlow">
+      <stop offset="0%" stop-color="rgba(102, 126, 234, 0.3)"/>
+      <stop offset="100%" stop-color="rgba(102, 126, 234, 0)"/>
+    </radialGradient>
+    
+    <!-- Refined filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <style>
+      .luxury-text {
+        font-family: 'Georgia', serif;
+        font-size: 92px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: url(#accentGlow);
+        filter: url(#glow);
+        letter-spacing: 4px;
+      }
+      
+      .typing-text {
+        font-family: 'Consolas', 'Monaco', monospace;
+        font-size: 22px;
+        text-anchor: middle;
+        fill: #a8b2d1;
+        opacity: 0.9;
+      }
+      
+      .cursor {
+        fill: #667eea;
+        opacity: 0;
+        animation: blink 0.9s infinite;
+      }
+      
+      /* Floating particles */
+      .particle {
+        fill: url(#accentGlow);
+        opacity: 0;
+        animation: float 6s infinite ease-in-out;
+      }
+      
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      
+      @keyframes float {
+        0% { 
+          opacity: 0;
+          transform: translateY(0px) scale(0);
+        }
+        20% {
+          opacity: 0.6;
+        }
+        80% {
+          opacity: 0.3;
+        }
+        100% { 
+          opacity: 0;
+          transform: translateY(-120px) scale(1);
+        }
+      }
+      
+      /* Shimmer effect */
+      @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
+      
+      .shimmer-rect {
+        animation: shimmer 3s infinite;
+      }
+      
+      /* Pulsing glow circles */
+      @keyframes pulse {
+        0%, 100% { 
+          r: 80;
+          opacity: 0.1;
+        }
+        50% { 
+          r: 140;
+          opacity: 0.03;
+        }
+      }
+      
+      .pulse-circle {
+        fill: url(#radialGlow);
+        animation: pulse 4s infinite ease-in-out;
+      }
+    </style>
+  </defs>
   
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e3a8a" stroke-width="1" opacity="0.3"/>
-  </pattern>
-  <rect width="100%" height="100%" fill="url(#grid)" />
-
-  <g>
-    <rect x="-100" y="40" width="100" height="2" fill="#3b82f6" opacity="0.8">
-      <animate attributeName="x" from="-100" to="900" dur="2s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
-    </rect>
-    
-    <rect x="-200" y="125" width="200" height="1" fill="#ffffff" opacity="0.5">
-      <animate attributeName="x" from="-200" to="1000" dur="1.2s" begin="0.5s" repeatCount="indefinite" />
-    </rect>
-
-    <rect x="-150" y="200" width="150" height="4" fill="#06b6d4" opacity="0.6">
-      <animate attributeName="x" from="-150" to="900" dur="3.5s" repeatCount="indefinite" />
-    </rect>
-    
-     <rect x="-50" y="80" width="50" height="1" fill="#60a5fa" opacity="0.7">
-      <animate attributeName="x" from="-50" to="850" dur="4s" begin="1s" repeatCount="indefinite" />
-    </rect>
+  <!-- Luxury background -->
+  <rect width="800" height="400" fill="url(#luxuryBg)"/>
+  
+  <!-- Animated pulsing circles -->
+  <circle cx="150" cy="100" class="pulse-circle">
+    <animate attributeName="r" values="60;120;60" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.15;0.03;0.15" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="300" class="pulse-circle" style="animation-delay: -2.5s">
+    <animate attributeName="r" values="70;130;70" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.15;0.03;0.15" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Decorative corner accents -->
+  <path d="M 0,0 L 120,0 L 0,120 Z" fill="url(#accentGlow)" opacity="0.08"/>
+  <path d="M 800,400 L 680,400 L 800,280 Z" fill="url(#accentGlow)" opacity="0.08"/>
+  
+  <!-- Shimmer overlay effect -->
+  <g opacity="0.15">
+    <rect class="shimmer-rect" x="-100" y="0" width="100" height="400" fill="url(#accentGlow)" opacity="0.3"/>
   </g>
-
-  <style>
-    .main-text {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 800; /* Extra Bold */
-      font-size: 56px;
-      fill: #ffffff;
-      text-anchor: middle;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .sub-text {
-      font-family: 'Courier New', Courier, monospace; /* Monospace biar kesan coding */
-      font-weight: 600;
-      font-size: 18px;
-      fill: #60a5fa; /* Biru Muda */
-      text-anchor: middle;
-      letter-spacing: 4px;
-    }
-  </style>
-
-  <text x="52%" y="132" class="main-text" fill="#2563eb" opacity="0.4">
-      [NAMA ANDA]
-  </text>
-
-  <text x="50%" y="130" class="main-text">
-    [NAMA ANDA]
-  </text>
-
-  <text x="50%" y="170" class="sub-text">
-    &lt; FULL STACK DEVELOPER /&gt;
-  </text>
   
-  <rect x="635" y="155" width="10" height="20" fill="#60a5fa">
-     <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" />
-  </rect>
-
+  <!-- Floating particles -->
+  <circle class="particle" cx="200" cy="350" r="3" style="animation-delay: 0s; animation-duration: 7s;"/>
+  <circle class="particle" cx="600" cy="350" r="2.5" style="animation-delay: 2s; animation-duration: 8s;"/>
+  <circle class="particle" cx="400" cy="370" r="2" style="animation-delay: 4s; animation-duration: 6.5s;"/>
+  <circle class="particle" cx="300" cy="360" r="2.5" style="animation-delay: 1.5s; animation-duration: 7.5s;"/>
+  <circle class="particle" cx="500" cy="365" r="2" style="animation-delay: 3.5s; animation-duration: 6s;"/>
+  
+  <!-- Main name text -->
+  <text x="400" y="180" class="luxury-text">davvrbbani</text>
+  
+  <!-- Typewriter effect subtitle -->
+  <g id="typewriter">
+    <text id="typed-text" x="400" y="250" class="typing-text"></text>
+    <rect id="cursor" class="cursor" x="400" y="235" width="2" height="24"/>
+  </g>
+  
+  <script type="text/javascript">
+    <![CDATA[
+    (function() {
+      const texts = [
+        "Website Developer",
+        "Apps Mobile Developer",
+        "Full Stack Engineer",
+        "UI/UX Specialist"
+      ];
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let isPaused = false;
+      
+      const typedTextElement = document.getElementById('typed-text');
+      const cursorElement = document.getElementById('cursor');
+      
+      function updateCursorPosition() {
+        if (typedTextElement) {
+          const bbox = typedTextElement.getBBox();
+          const xPos = bbox.x + bbox.width + 2;
+          cursorElement.setAttribute('x', xPos);
+        }
+      }
+      
+      function type() {
+        const currentText = texts[textIndex];
+        
+        if (isPaused) {
+          setTimeout(type, 2000);
+          isPaused = false;
+          isDeleting = true;
+          return;
+        }
+        
+        if (isDeleting) {
+          typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+          
+          if (charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(type, 500);
+            return;
+          }
+        } else {
+          typedTextElement.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
+          
+          if (charIndex === currentText.length) {
+            isPaused = true;
+            setTimeout(type, 2000);
+            updateCursorPosition();
+            return;
+          }
+        }
+        
+        updateCursorPosition();
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(type, speed);
+      }
+      
+      // Start typing effect
+      setTimeout(type, 1000);
+    })();
+    ]]>
+  </script>
 </svg>
