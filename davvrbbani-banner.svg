@@ -133,8 +133,8 @@
     <animate attributeName="opacity" values="0;0.7;0" dur="6.5s" begin="0.5s" repeatCount="indefinite"/>
   </circle>
   
-  <text x="402" y="112" class="shadow-text">DAVVRBBANI</text>
-  <text x="400" y="110" class="main-text">DAVVRBBANI</text>
+  <text x="402" y="112" class="shadow-text">davvrbbani</text>
+  <text x="400" y="110" class="main-text">davvrbbani</text>
   
   <text x="260" y="170" class="bracket-text">&lt; </text>
   <text x="540" y="170" class="bracket-text"> /&gt;</text>
