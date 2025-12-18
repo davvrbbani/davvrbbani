@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="premiumBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/> <stop offset="100%" stop-color="#000000"/> </linearGradient>
+
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bf953f" />
+      <stop offset="40%" stop-color="#fcf6ba" /> <stop offset="60%" stop-color="#fcf6ba" /> <stop offset="100%" stop-color="#bf953f" />
+    </linearGradient>
+    
+    <pattern id="texture" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+        <rect width="2" height="2" fill="rgba(255,255,255,0.03)"/>
+    </pattern>
+
+    <style>
+      /* Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto+Mono&display=swap');
+
+      .bg-base { fill: url(#premiumBg); }
+      .bg-texture { fill: url(#texture); }
+
+      /* Main Title Styling - Premium Look */
+      .main-text {
+        font-family: 'Cinzel', 'Georgia', serif; /* Elegant Serif Font */
+        font-size: 80px;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        fill: url(#goldGradient);
+        /* drop-shadow untuk kesan 3D/timbul */
+        filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+        /* Animasi kilauan */
+        animation: shimmer 6s infinite linear;
+      }
+
+      /* Subtitle Container & Cursor */
+      .subtitle-container {
+        font-family: 'Roboto Mono', 'Courier New', monospace; /* Monospace agar ketikan rapi */
+        font-size: 22px;
+        fill: #e0c088; /* Warna emas yang lebih soft */
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      
+      /* Cursor blinking animation */
+      .cursor {
+        animation: blink 1s step-end infinite;
+        fill: #e0c088;
+      }
+
+      /* Complex Typewriter Animation Logic */
+      /* Menggunakan clip-path inset untuk menyembunyikan/menampilkan teks */
+      
+      /* Fase 1: Website Developer */
+      .type-text-1 {
+        clip-path: inset(0 100% 0 0); /* Mulai tersembunyi */
+        animation: typingSequence1 10s steps(20, end) infinite;
+      }
+
+      /* Fase 2: Apps Mobile Developer */
+      .type-text-2 {
+        clip-path: inset(0 100% 0 0); /* Mulai tersembunyi */
+        animation: typingSequence2 10s steps(22, end) infinite;
+        opacity: 0; /* Sembunyikan total saat giliran teks 1 */
+      }
+
+
+      /* --- Keyframes Animations --- */
+
+      /* Animasi Kilauan Emas pada Teks Utama */
+      @keyframes shimmer {
+        0% { x: -100%; }
+        100% { x: 100%; }
+      }
+      
+      /* Animasi Berkedip Kursor */
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* Sequence 1: Mengetik "Website Developer" lalu menghapusnya */
+      @keyframes typingSequence1 {
+        0%   { clip-path: inset(0 100% 0 0); } /* Mulai */
+        15%  { clip-path: inset(0 0 0 0); }    /* Selesai mengetik */
+        35%  { clip-path: inset(0 0 0 0); }    /* Jeda (terbaca) */
+        45%  { clip-path: inset(0 100% 0 0); } /* Selesai menghapus */
+        100% { clip-path: inset(0 100% 0 0); } /* Tetap tersembunyi */
+      }
+
+      /* Sequence 2: Menunggu, lalu mengetik "Apps Mobile Dev", lalu menghapusnya */
+      @keyframes typingSequence2 {
+        0%, 49% { opacity: 0; clip-path: inset(0 100% 0 0); } /* Menunggu giliran */
+        50%  { opacity: 1; clip-path: inset(0 100% 0 0); }    /* Mulai muncul */
+        65%  { opacity: 1; clip-path: inset(0 0 0 0); }       /* Selesai mengetik */
+        85%  { opacity: 1; clip-path: inset(0 0 0 0); }       /* Jeda (terbaca) */
+        95%  { opacity: 1; clip-path: inset(0 100% 0 0); }    /* Selesai menghapus */
+        100% { opacity: 0; clip-path: inset(0 100% 0 0); }    /* Selesai loop */
+      }
+
+    </style>
+  </defs>
+
+  <rect width="100%" height="100%" class="bg-base" />
+  <rect width="100%" height="100%" class="bg-texture" opacity="0.4"/>
+  
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.7)"/>
+  </radialGradient>
+  <rect width="100%" height="100%" fill="url(#vignette)"/>
+
+
+  <text x="400" y="190" class="main-text">
+      davvrbbani
+      <tspan x="400" dy="0" fill="url(#goldGradient)" style="mix-blend-mode: overlay;">davvrbbani</tspan>
+  </text>
+
+  <g class="subtitle-container" transform="translate(400, 250)">
+      <text x="0" y="0" class="type-text-1">Website Developer</text>
+      <text x="0" y="0" class="type-text-2">Apps Mobile Developer</text>
+      
+      </g>
+  
+</svg>
