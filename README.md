@@ -19,7 +19,7 @@
 
 ```javascript
 const davvrbbani = {
-    location: "Cilacap, Indonesia 🇮🇩",
+    location: "Purwokerto, Indonesia 🇮🇩",
     currentFocus: "Building responsive web apps & mobile solutions",
     learning: ["Advanced React Patterns", "Cloud Architecture", "System Design"],
     interests: ["Open Source", "UI/UX Design", "Performance Optimization"],
