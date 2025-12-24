@@ -109,7 +109,7 @@ const davvrbbani = {
       <h3 align="center">🌐 Web Dashboard</h3>
       <div align="center">
         <a href="https://github.com/davvrbbani" target="_blank">
-          <img src="https://siakademika.kesug.com" alt="Dashboard" />
+          <img src="https://github.com/davvrbbani/davvrbbani/blob/main/assets/partners/dashboard.png" alt="Dashboard" />
         </a>
         <br><br>
         <p>
