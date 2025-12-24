@@ -75,7 +75,7 @@ const davvrbbani = {
       <h3 align="center">🎨 Personal Portfolio</h3>
       <div align="center">
         <a href="https://davysyuja.vercel.app/" target="_blank">
-          <img src="assets/portofilio.png" alt="Portfolio" />
+          <img src="assets/partners/portofilio.png" alt="Portfolio" />
         </a>
         <br><br>
         <p>
