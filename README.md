@@ -74,8 +74,8 @@ const davvrbbani = {
     <td width="50%" valign="top">
       <h3 align="center">🎨 Personal Portfolio</h3>
       <div align="center">
-        <a href="https://github.com/davvrbbani/portfolio" target="_blank">
-          <img src="https://via.placeholder.com/400x120/667eea/ffffff?text=Portfolio+Website" alt="Portfolio" />
+        <a href="https://davysyuja.vercel.app/" target="_blank">
+          <img src="https://davysyuja.vercel.app/" alt="Portfolio" />
         </a>
         <br><br>
         <p>
